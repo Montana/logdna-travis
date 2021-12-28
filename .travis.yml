@@ -17,6 +17,14 @@ before_install:
   - npm install -g npm@^6
   - export DEBUG=logdna*
 install:
+- npm install
+- npm install -g grunt-contrib-copy
+- npm install -g grunt-curl
+- npm install -g grunt-eslint 
+- npm install -g grunt-exec
+- npm install -g grunt-line-remover
+- npm install -g grunt-mocha-cli
+- npm install -g grunt-zip 
 - npm install --save-dev load-grunt-tasks
 - npm install grunt --save-dev 
 script:
