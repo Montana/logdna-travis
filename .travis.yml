@@ -18,6 +18,6 @@ before_install:
   - export DEBUG=logdna*
 install:
 - npm install
-- npm install -g grunt-cli
+- npm install grunt--save -dev
 script:
 - grunt test
