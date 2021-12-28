@@ -17,7 +17,7 @@ before_install:
   - npm install -g npm@^6
   - export DEBUG=logdna*
 install:
-- npm install
+- npm install --save-dev load-grunt-tasks
 - npm install grunt --save-dev 
 script:
 - grunt test --force
