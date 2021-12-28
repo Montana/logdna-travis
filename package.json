@@ -1,12 +1,10 @@
 {
   "name": "logdna-agent",
-  "version": "2.2.1",
-  "description": "LogDNA Agent streams from log files to your LogDNA account. Works with Linux, Windows, and macOS Servers",
+  "version": "1.6.2",
+  "description": "LogDNA Collector Agent",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "tap"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -18,37 +16,37 @@
     "url": "https://github.com/logdna/logdna-agent/issues"
   },
   "homepage": "https://github.com/logdna/logdna-agent",
-  "eslintConfig": {
-    "extends": [
-      "logdna"
-    ],
-    "root": true,
-    "ignorePatterns": [
-      "node_modules/",
-      "coverage/"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2019
-    },
-    "rules": {
-      "node/no-deprecated-api": 0
-    }
-  },
   "dependencies": {
-    "@logdna/logger": "^2.2.2",
-    "async": "^3.2.0",
-    "commander": "^4.1.1",
-    "debug": "^4.1.1",
-    "getos": "^3.1.4",
-    "glob": "^7.1.6",
+    "agentkeepalive": "^2.1.1",
+    "async": "^1.5.2",
+    "commander": "^2.20.0",
+    "debug": "^2.2.0",
+    "file-queue": "^0.2.1",
+    "getos": "^2.4.0",
+    "glob": "^7.0.3",
+    "https-proxy-agent": "^2.1.0",
     "is-administrator": "^1.0.1",
+    "macaddress": "^0.2.8",
     "properties": "^1.2.1",
-    "request": "^2.88.2"
+    "request": "^2.71.0"
+  },
+  "optionalDependencies": {
+    "node-windows": "^0.1.11"
   },
   "devDependencies": {
-    "eslint": "^7.6.0",
-    "eslint-config-logdna": "^1.0.0",
-    "nock": "^13.0.4",
-    "tap": "^14.10.8"
+    "grunt": "^1.0.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-curl": "^2.2.0",
+    "grunt-eslint": "^20.0.0",
+    "grunt-exec": "^0.4.6",
+    "grunt-line-remover": "0.0.2",
+    "grunt-mocha-cli": "^4.0.0",
+    "grunt-zip": "^0.17.1",
+    "guid": "0.0.12",
+    "load-grunt-tasks": "^3.4.0",
+    "require-uncached": "^1.0.2",
+    "rimraf": "^2.5.2",
+    "skeemas": "^1.2.2"
   }
 }
+
