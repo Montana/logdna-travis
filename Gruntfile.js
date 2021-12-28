@@ -1,5 +1,3 @@
-
-   
 var pkg = require('./package.json');
 var grunt = require('grunt');
 var path = require('path');
