@@ -1,0 +1,54 @@
+{
+  "name": "logdna-agent",
+  "version": "2.2.1",
+  "description": "LogDNA Agent streams from log files to your LogDNA account. Works with Linux, Windows, and macOS Servers",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "tap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logdna/logdna-agent.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/logdna/logdna-agent/issues"
+  },
+  "homepage": "https://github.com/logdna/logdna-agent",
+  "eslintConfig": {
+    "extends": [
+      "logdna"
+    ],
+    "root": true,
+    "ignorePatterns": [
+      "node_modules/",
+      "coverage/"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2019
+    },
+    "rules": {
+      "node/no-deprecated-api": 0
+    }
+  },
+  "dependencies": {
+    "@logdna/logger": "^2.2.2",
+    "async": "^3.2.0",
+    "commander": "^4.1.1",
+    "debug": "^4.1.1",
+    "getos": "^3.1.4",
+    "glob": "^7.1.6",
+    "is-administrator": "^1.0.1",
+    "properties": "^1.2.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-logdna": "^1.0.0",
+    "nock": "^13.0.4",
+    "tap": "^14.10.8"
+  }
+}
